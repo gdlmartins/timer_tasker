@@ -1,7 +1,8 @@
-import React from "react";
+import React , {useId} from "react";
 import { task } from "../../interfaces/tasks";
 import { Item } from "./item/item";
 import style from "./style.module.scss";
+
 
 
 
@@ -17,7 +18,7 @@ const tarefas: task[] = [
 ]
 
 function Lista() {
-
+ 
 
     return (
         <aside className={style.listaTarefas}>
@@ -25,11 +26,13 @@ function Lista() {
                 Studying
             </h2>
             <ul>
-                   {tarefas.map((item)=>(
-                <Item
-                  {...item}
-                />
-                ))}
+                   {tarefas.map((item , key)=>(
+                       <Item
+                       key={key}
+                       {...item}
+                       />
+                      
+                       ))}
             </ul>
         </aside>
     )

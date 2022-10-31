@@ -4,11 +4,13 @@ import './App.css';
 
 import Formulario from './components/form';
 import Lista from './components/lista';
+import Cronometro from './components/Cronometro';
 
 function App() {
   return (
-    <div >
+    <div>
       <Formulario/>
+      <Cronometro/>
       <Lista/>
     </div>
   );
